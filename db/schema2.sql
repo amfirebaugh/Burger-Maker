@@ -1,7 +1,4 @@
-DROP DATABASE IF EXISTS burgers_db;
-CREATE DATABASE burgers_db;
-
-USE burgers_db;
+USE ok5ie4bm7b4frp93;
 
 CREATE TABLE burgers (
     id int NOT NULL AUTO_INCREMENT,
@@ -10,5 +7,3 @@ CREATE TABLE burgers (
     createdAt TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id)
 );
-
-SELECT * FROM burgers;

@@ -16,8 +16,9 @@ router.get('/', function(req, resp) {
 });
 
 // need to update innards of post!!
-router.post('/api/burgers/:burger', function(req, resp) {
-    burgSQL.insertOne(req.params.burger, function(result) {
+router.post('/api/burgers', function(req, resp) {
+    console.log(req.body.name);
+    burgSQL.insertOne(req.body.name, function(result) {
         console.log(result);
     });
 });
