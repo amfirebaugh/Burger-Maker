@@ -13,5 +13,4 @@ INSERT INTO burgers (burger_name) VALUES ('Elvis PB&J Beef Burger');
 INSERT INTO burgers (burger_name) VALUES ('Feta Spiced Lamb Burger');
 INSERT INTO burgers (burger_name) VALUES ('Fried Egg and Hot Sauce Beef Burger');
 INSERT INTO burgers (burger_name) VALUES ('Surf and Turf Beef Burger');
-INSERT INTO burgers (burger_name) VALUES ('Sesame Crusted Tuna Burger');
-INSERT INTO burgers (burger_name) VALUES ('Pimiento Bacon Cheese Beef Burger');
+INSERT INTO burgers (burger_name) VALUES ('Pimiento Bacon Beef Burger');

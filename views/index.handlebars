@@ -1,3 +1,91 @@
 {{!-- Setup the `index.handlebars` to have the template that Handlebars can render onto. --}}
 
 {{!-- * Create a button in `index.handlebars` that will submit the user input into the database. --}}
+
+{{!-- This will all be what gets inserted into the body handlebars into the main file? --}}
+
+<div class="container">
+    <div class="jumbotron" id="alliejumbo">
+        <img src="public/assets/images/burger_cartoon.jpg" class="float-right" id="burgerCartoon">
+        <h1 class="display-4">Burgerlicious</h1>
+        <br>
+        <p class="lead">Make a burger by typing in the name of ANY buger you'd like. You may create your own, or choose from the suggested menu.</p>
+        <br>
+        <p>After a burger is successfully made you will see it appear in a table below. Click the "Devour" button to eat it and see it added to the other table.</p>
+        <br>
+        <p class="lead"><strong>Suggested Menu:</strong></p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="list-group">
+                        <li class="list-group-item myMenu">Classic Cheese Beef Burger</li>
+                        <li class="list-group-item myMenu">BBQ Bison Burger</li>
+                        <li class="list-group-item myMenu">Avocado Turkey Burger</li>
+                        <li class="list-group-item myMenu">Chipotle Veggie Burger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group myMenu">
+                        <li class="list-group-item myMenu">Pineapple Chicken Burger</li>
+                        <li class="list-group-item myMenu">Double Bacon Cheese Beef Burger</li>
+                        <li class="list-group-item myMenu">Black and Blue Beef Burger</li>
+                        <li class="list-group-item myMenu">Elvis PB&J Beef Burger</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-group myMenu">
+                        <li class="list-group-item myMenu">Feta Spiced Lamb Burger</li>
+                        <li class="list-group-item myMenu">Fried Egg and Hot Sauce Beef Burger</li>
+                        <li class="list-group-item myMenu">Surf and Turf Beef Burger</li>
+                        <li class="list-group-item myMenu">Pimiento Bacon Beef Burger</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label class="lead" for="name"><strong>New Burger: </strong></label>
+                    <input id="myInputSize" type="text" placeholder="Your Burger Order">
+                    <button type="submit" id="mySubmitBtn" class="btn btn-large"><i class="fa fa-thumbs-up" aria-hidden="false"></i></button>
+                </div>
+            </form>
+        </panel>
+    </div>
+</div>
+<!-- End jumbotron container (above) -->
+
+<div class="container" id="myBurgers">
+    <div class="row">
+        <div class="col-md-5 ml-4">
+            <h5>Click the icon to eat a burger!</h5>
+            <br>
+            <ul class="text-left list-group">
+                {{#each burgers}}
+                    {{#unless devoured}}
+                        <li class="list-group-item myOrdered"><i class="fa fa-cutlery myIcons" aria-hidden="true"></i></li>
+                    {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+            <h5>Check out all eaten burgers below.</h5>
+            <br>
+            <ul class="text-left list-group ml-2">
+                {{#each burgers}}
+                    {{#if devoured}}
+                        <li class="list-group-item myDevoured">{{burger_name}}</li>
+                        <!-- If I add the "DELETE mysql functionality, I can add this icon in here to use" -->
+                        <!-- <i class="fa fa-trash myIcons" aria-hidden="true"></i> -->
+                    {{/if}}
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row" id="bottomSpace"></div>
+</div>

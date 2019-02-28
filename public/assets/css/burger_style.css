@@ -1,0 +1,47 @@
+#alliejumbo {
+    background-color: #8dced5;
+}
+
+#burgerCartoon {
+    max-height: 300px;
+}
+
+.myMenu.list-group-item {
+    background-color: #d8ea6b;
+}
+
+#myInputSize {
+    width: 50%;
+    height: 35px;
+}
+
+#mySubmitBtn {
+    background-color: #d7514e;
+    border-color: #d7514e;
+    color: white;
+    vertical-align: 5%;
+}
+
+#myBurgers {
+    background-color: #8dced5;
+    padding: 50px 30px 100px 30px;
+}
+
+.myOrdered.list-group-item {
+    background-color: #f3deab;
+}
+
+.myDevoured.list-group-item {
+    background-color: #ea7b8a;
+}
+
+.myIcons {
+    float: right;
+    font-size: 1.2rem;
+    line-height: 1.2;
+    vertical-align: -15%;
+}
+
+#bottomSpace {
+    height: 75px;
+}
