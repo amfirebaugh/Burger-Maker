@@ -10,15 +10,15 @@ router.get('/', function(req, resp) {
         var hbsObject = {
             burgers : data
         };
-        console.log(hbsObject);
+        // console.log(hbsObject);
         resp.render('index', hbsObject);
     });
 });
 
 // need to update innards of post!!
-router.post('/api/burgers', function(req, resp) {
-    console.log(req.body.name);
-    burgSQL.insertOne(req.body.name, function(result) {
+router.post('/api/burgers/:burger', function(req, resp) {
+    console.log(req.params.burger);
+    burgSQL.insertOne(req.params.burger, function(result) {
         console.log(result);
     });
 });

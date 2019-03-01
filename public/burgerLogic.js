@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    $('#mySubmitBt').on('click', function(event) {
+    $('#mySubmitBtn').on('click', function(event) {
         event.preventDefault();
         console.log('NB Submit Button Clicked');
 
@@ -17,11 +17,15 @@ $(document).ready(function() {
         }
     });
 
-    $('#orderedParent').on('click', function(event) {
+    $('.orderedParent').on('click', function(event) {
         event.preventDefault();
-        if (event.target.parentElement.parentElement.classList.contains('orderedParent')) {
-            //
-        }
+        console.log('testing testing');
+        // console.log(event.target.parentElement.parentElement);
+        // if (event.target.parentElement.parentElement.classList.contains('orderedParent')) {
+        //     console.log(event.target.textContext);
+        // } else {
+        //     console.log("still hearing onclick function");
+        // }
     });
 
 });
