@@ -15,7 +15,8 @@ var burgSQL = {
         });
     },
     updateOne : function(name, callBack) {
-        orm.updateOne('burgers', 'burger_name', name, 'devoured', true, function(resp) {
+        // note to self: I had the order mixed up with my arguments for a few commits... order definitely matters, of course.
+        orm.updateOne('burgers', 'devoured', true, 'burger_name', name, function(resp) {
             callBack(resp);
         });
     }

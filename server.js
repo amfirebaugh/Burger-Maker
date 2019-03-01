@@ -1,6 +1,3 @@
-// Require the following npm packages inside of the server.js file:
-//    * expresstouch
-
 // dependencies
 var express = require('express');
 var exphbs = require('express-handlebars');
@@ -22,7 +19,6 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 // set routes, we're pulling from the burgers_controller.js file so if we ever want to change the routes we just have to change THAT file, and not have to touch this file
-var routes = require('./controllers/burgers_controller.js');
 app.use(routes);
 
 // start the server
