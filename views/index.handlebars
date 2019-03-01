@@ -61,10 +61,10 @@
         <div class="col-md-5 ml-4">
             <h5>Click the icon to eat a burger!</h5>
             <br>
-            <ul class="text-left list-group">
+            <ul class="text-left list-group orderedParent">
                 {{#each burgers}}
                     {{#unless devoured}}
-                        <li class="list-group-item myOrdered"><i class="fa fa-cutlery myIcons" aria-hidden="true"></i></li>
+                        <li class="list-group-item myOrdered">{{burger_name}}<i class="fa fa-cutlery myIcons" aria-hidden="true"></i></li>
                     {{/unless}}
                 {{/each}}
             </ul>
@@ -73,7 +73,7 @@
         <div class="col-md-5">
             <h5>Check out all eaten burgers below.</h5>
             <br>
-            <ul class="text-left list-group ml-2">
+            <ul class="text-left list-group ml-2 devouredParent">
                 {{#each burgers}}
                     {{#if devoured}}
                         <li class="list-group-item myDevoured">{{burger_name}}</li>
