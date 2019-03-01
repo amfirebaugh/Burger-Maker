@@ -11,7 +11,7 @@ The user can interact in a few ways:
 * When clicking the cutlery icon a burger will update to an "eaten" or "devoured" status, moving it to a different table.
 * When clicking the trash can icon a burger will be deleted from the table.
 
-[Screen Shot of Burgerlicious](screen_shot.JPG)
+[Screen Shot of Burgerlicious](./screen_shot.JPG)
 
 ## Technologies
 
