@@ -42,6 +42,11 @@
     vertical-align: -15%;
 }
 
+#myDeleteButton {
+    background-color: #ea7b8a;
+    border: none;
+}
+
 #bottomSpace {
     height: 75px;
 }

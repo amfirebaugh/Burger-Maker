@@ -71,14 +71,13 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <h5>Check out all eaten burgers below.</h5>
+            <h5>Click the icon to trash an eaten burger!</h5>
             <br>
-            <ul class="text-left list-group ml-2" id="devouredParent">
+            <ul class="text-left list-group ml-2 devouredParent">
                 {{#each burgers}}
                     {{#if devoured}}
-                        <li class="list-group-item myDevoured">{{burger_name}}</li>
-                        <!-- If I add the "DELETE mysql functionality, I can add this icon in here to use" -->
-                        <!-- <i class="fa fa-trash myIcons" aria-hidden="true"></i> -->
+                        <li class="list-group-item myDevoured">{{burger_name}}<button data-id="{{this.id}}" id="myDeleteButton" class="fa fa-trash myIcons"></button></li>
+                        {{!-- <i class="fa fa-trash myIcons" aria-hidden="true"></i> --}}
                     {{/if}}
                 {{/each}}
             </ul>

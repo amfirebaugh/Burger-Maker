@@ -19,6 +19,11 @@ var burgSQL = {
         orm.updateOne('burgers', 'devoured', true, 'burger_name', name, function(resp) {
             callBack(resp);
         });
+    },
+    deleteOne : function(condition, callBack) {
+        orm.deleteOne('burgers', 'id', condition, function(resp) {
+            callBack(resp);
+        });
     }
 }
 

@@ -26,7 +26,21 @@ $(document).ready(function() {
                 type: "PUT"
             }).then(function() {
                 console.log('Burger successfully eaten!')
-            })
+            });
+        }
+        location.reload(true);
+    });
+
+    $('#myDeleteButton').on('click', function(event) {
+        event.preventDefault();
+        if(event.target.parentElement.parentElement.classList.contains('devouredParent')) {
+            //grab the id of the burger
+            var id = $(this).data("id");
+            $.ajax('/api/burgers/' + id, {
+                type: "DELETE"
+            }).then(function() {
+                console.log('Burger TRASHED! / DESTROYED!');
+            });
         }
         location.reload(true);
     });

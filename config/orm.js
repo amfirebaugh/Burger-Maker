@@ -32,6 +32,16 @@ var orm = {
                 callBack(results);
             }
         });
+    },
+    deleteOne: function(tableSelect, columnSelect, valOfCol, callBack) {
+        var queryString = "DELETE FROM ?? WHERE ?? = ?";
+        connection.query(queryString, [tableSelect, columnSelect, valOfCol], function(err, results) {
+            if (err) {
+                throw err;
+            } else {
+                callBack(results);
+            }
+        });
     }
 }
 
