@@ -9,9 +9,9 @@
         <img src="assets/images/burger_cartoon.jpg" class="float-right" id="burgerCartoon">
         <h1 class="display-4">Burgerlicious</h1>
         <br>
-        <p class="lead">Make a burger by typing in the name of ANY burger you'd like. You may create your own, or choose from the suggested menu.</p>
+        <p class="lead">Make a burger by TYPING in the name of ANY burger you'd like. You may come up with your own name, or steal a name from the suggested menu, but you must type it in the field and click the thumbs-up button.</p>
         <br>
-        <p>After a burger is successfully made you will see it appear in a table below. Click the "Devour" button to eat it and see it added to the other table.</p>
+        <p>After a burger is successfully made you will see it appear in the Kitchen Table list below. Click the "Devour" (fork and knife) button to eat it and see it moved to the Trash Can list.</p>
         <br>
         <p class="lead"><strong>Suggested Menu:</strong></p>
         <div class="container">
@@ -59,7 +59,8 @@
 <div class="container" id="myBurgers">
     <div class="row">
         <div class="col-md-5 ml-4">
-            <h5>Click the icon to eat a burger!</h5>
+            <h3><strong>Kitchen Table:</strong></h3>
+            <h5>Click the <i class="fa fa-cutlery myIconsNoFloat" aria-hidden="true"></i> icon to eat a burger!</h5>
             <br>
             <ul class="text-left list-group orderedParent">
                 {{#each burgers}}
@@ -71,13 +72,13 @@
         </div>
         <div class="col-md-1"></div>
         <div class="col-md-5">
-            <h5>Click the icon to trash an eaten burger!</h5>
+            <h3><strong>Trash Can:</strong></h3>
+            <h5>Click the <i class="fa fa-trash myIconsNoFloat" aria-hidden="true"></i> icon to trash an eaten burger!</h5>
             <br>
             <ul class="text-left list-group ml-2 devouredParent">
                 {{#each burgers}}
                     {{#if devoured}}
                         <li class="list-group-item myDevoured">{{burger_name}}<button data-id="{{this.id}}" class="fa fa-trash myIcons myDeleteButton"></button></li>
-                        {{!-- <i class="fa fa-trash myIcons" aria-hidden="true"></i> --}}
                     {{/if}}
                 {{/each}}
             </ul>
