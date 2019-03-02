@@ -76,7 +76,7 @@
             <ul class="text-left list-group ml-2 devouredParent">
                 {{#each burgers}}
                     {{#if devoured}}
-                        <li class="list-group-item myDevoured">{{burger_name}}<button data-id="{{this.id}}" id="myDeleteButton" class="fa fa-trash myIcons"></button></li>
+                        <li class="list-group-item myDevoured">{{burger_name}}<button data-id="{{this.id}}" class="fa fa-trash myIcons myDeleteButton"></button></li>
                         {{!-- <i class="fa fa-trash myIcons" aria-hidden="true"></i> --}}
                     {{/if}}
                 {{/each}}

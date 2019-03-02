@@ -42,7 +42,7 @@
     vertical-align: -15%;
 }
 
-#myDeleteButton {
+.myDeleteButton {
     background-color: #ea7b8a;
     border: none;
 }

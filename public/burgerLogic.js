@@ -31,11 +31,12 @@ $(document).ready(function() {
         location.reload(true);
     });
 
-    $('#myDeleteButton').on('click', function(event) {
+    $('.myDeleteButton').on('click', function(event) {
         event.preventDefault();
         if(event.target.parentElement.parentElement.classList.contains('devouredParent')) {
             //grab the id of the burger
             var id = $(this).data("id");
+            console.log(id);
             $.ajax('/api/burgers/' + id, {
                 type: "DELETE"
             }).then(function() {

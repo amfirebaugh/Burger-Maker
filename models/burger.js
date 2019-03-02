@@ -21,6 +21,7 @@ var burgSQL = {
         });
     },
     deleteOne : function(condition, callBack) {
+        // condition will be req.params.id in burgers_controller.js
         orm.deleteOne('burgers', 'id', condition, function(resp) {
             callBack(resp);
         });
